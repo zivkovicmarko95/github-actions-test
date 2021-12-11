@@ -16,7 +16,7 @@ jobs:
       - name: List Files After Checkout
         run: |
           pwd
-          ls -a
+          ls
 
       - name: Simple JS Action
         id: greet # we have to ID if we want to use it in steps object
