@@ -7,8 +7,16 @@ jobs:
       - name: List Files
         run: |
           pwd
-          ls
-          
+          ls 
+
+      - name: Checkout 
+        uses: actions/checkout # when something is done in this repository, then trigger this step
+
+      - name: List Files After Checkout
+        run: |
+          pwd
+          ls -a
+
       - name: Simple JS Action
         id: greet # we have to ID if we want to use it in steps object
         uses: zivkovicmarko95/hello-world-javascript-action-@main
