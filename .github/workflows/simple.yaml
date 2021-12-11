@@ -20,6 +20,7 @@ jobs:
 
   run-windows-commands:
     runs-on: windows-latest
+    needs: [ "run-shell-command" ] # array of the jobs that this job -> run-windows-commands depends on and it will run when the jobs finished in the needs array
     steps:
       - name: Directory PowerShell
         run: Get-Location
