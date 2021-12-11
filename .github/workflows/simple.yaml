@@ -1,13 +1,19 @@
 name: Shell Commands
 on: [ push ]
 jobs:
-  run-shell-command:
-    runs-on: ubuntu-latest
-    steps:
-      - name: echo a string
-        run: echo "Hello World"
+  run-shell-command: # this is the name of the job
+    runs-on: ubuntu-latest # it will be run on ubuntu
+    steps: # steps that will be triggered
+      - name: echo a string  # name of the step
+        run: echo "Hello World" # command that needs to be run
       
       - name: multiline script
         run: | 
           node -v
           npm -v
+
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python # shell that needs to be used if I want to run the commands
