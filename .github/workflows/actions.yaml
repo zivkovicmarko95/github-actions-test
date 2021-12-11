@@ -10,17 +10,10 @@ jobs:
           ls 
           echo "${{ github.token }}" 
       # github.token - github token to authenticate the user
-      - name: Checkout 
-        uses: actions/checkout # when something is done in this repository, then trigger this step
-
-      - name: List Files After Checkout
-        run: |
-          pwd
-          ls
 
       - name: Simple JS Action
         id: greet # we have to ID if we want to use it in steps object
-        uses: zivkovicmarko95/hello-world-javascript-action-
+        uses: zivkovicmarko95/hello-world-javascript-action-@main
         with:
           who-to-greet: John
 
