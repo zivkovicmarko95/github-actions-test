@@ -20,7 +20,7 @@ jobs:
 
       - name: Simple JS Action
         id: greet # we have to ID if we want to use it in steps object
-        uses: zivkovicmarko95/hello-world-javascript-action-@main
+        uses: zivkovicmarko95/hello-world-javascript-action-
         with:
           who-to-greet: John
 
