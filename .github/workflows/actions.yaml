@@ -5,6 +5,9 @@ on:
   push:
   pull_request:
     types: [ opened, reopened, assigned ]
+    # trigger this only when it's merged to master
+    branches: 
+      - main
 
 jobs:
   run-github-actions:
